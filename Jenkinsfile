@@ -5,7 +5,7 @@ pipeline {
         stage('Instalar Dependencias') {
             steps {
                 echo 'Instalando dependencias do projeto...'
-                bat 'npm install'
+                bat 'npm run build-inexistente'
             }
         }
 
