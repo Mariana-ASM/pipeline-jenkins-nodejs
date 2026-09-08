@@ -177,6 +177,26 @@ finalizou o pipeline com o status `SUCCESS`.
 
 <img width="389" height="183" alt="Captura de tela 2026-09-07 214937" src="https://github.com/user-attachments/assets/5f7053ee-4c01-4a5b-8b46-60a6992edcde" />
 
+Também foi realizado um teste controlado para validar o comportamento do
+pipeline em caso de falha.
+
+Foi provocado temporariamente um erro na etapa de Build utilizando um comando
+que retorna código de saída `1`. Com isso, o Jenkins interrompeu as etapas
+seguintes e executou corretamente a ação `failure` definida no bloco `post`.
+
+Resultado obtido:
+
+```text
+Pipeline falhou! Verifique os logs.
+ERROR: script returned exit code 1
+Finished: FAILURE
+```
+
+<img width="1599" height="722" alt="Captura de tela 2026-09-07 221420" src="https://github.com/user-attachments/assets/dba64440-43aa-438e-8001-c0e2f32647b0" />
+
+<img width="740" height="361" alt="Captura de tela 2026-09-07 221429" src="https://github.com/user-attachments/assets/c64cb655-9cec-4e12-bb89-9002ecd3ce4e" />
+
+
 ## Tecnologias utilizadas
 
 * Jenkins
